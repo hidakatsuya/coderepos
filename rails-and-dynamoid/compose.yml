@@ -1,0 +1,29 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile_inline: |
+        FROM ruby:3.3.0
+        RUn echo 'IRB.conf[:USE_AUTO_INDENT] = false' >> ~/.irbrc
+        WORKDIR /rails
+        RUN bundle config set --local path /bundle
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/rails:cached
+      - ./tmp/bundle:/bundle
+    command: bash -c 'rm -f tmp/pids/server.pid; bin/rails s -b 0.0.0.0'
+    ports:
+      - '3000:3000'
+
+  localstack:
+    image: localstack/localstack
+    ports:
+      - '4566:4566'
+      - '4571:4571'
+    environment:
+      - SERVICES=dynamodb
+      - DEBUG=${DEBUG:-0}
+    volumes:
+      - "${LOCALSTACK_VOLUME_DIR:-./.localstack}:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"

@@ -1,0 +1,4 @@
+<h1>Home#index</h1>
+<% @notifications.each do |notification| %>
+  <%= notification.attributes.to_json %>
+<% end %>
