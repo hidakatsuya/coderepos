@@ -64,3 +64,5 @@ aws --endpoint-url=http://localhost:4566 dynamodb list-tables --profile localsta
 * [lib/dynamoid/adapter.rb](https://github.com/Dynamoid/dynamoid/blob/3fc2fc7155b1d7a294048126e31c8c095d888da4/lib/dynamoid/adapter.rb)
 * [AWS入門ブログリレー2024〜Amazon DynamoDB編〜](https://dev.classmethod.jp/articles/introduction-2024-amazon-dynamodb/)
 * [Dynamoid/dynamoid - README.md](https://github.com/Dynamoid/dynamoid/blob/master/README.md)
+* [Dynamoid の使い方【global_secondary_index 編】](https://developer.feedforce.jp/entry/2017/11/26/195509)
+* [Dynamoid で gsi が有効化された状態で where できているか確かめる](https://zenn.dev/ndjndj/articles/c400e006459f90)
