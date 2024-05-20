@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Notification.create([
+  { title: 't1', start_at: Time.current },
+  { title: 't2', start_at: Time.current + 1.hour },
+  { title: 't3', start_at: Time.current + 2.hour, end_at: Time.current + 3.hours }
+])
