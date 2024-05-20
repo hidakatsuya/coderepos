@@ -58,6 +58,10 @@ bin/rails r 'puts Dynamoid.adapter.list_tables
 aws --endpoint-url=http://localhost:4566 dynamodb list-tables --profile localstack
 ```
 
+## 管理画面
+
+Visit http://localhost:8001
+
 ## References
 
 * [DynamoDB Available Commands](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/#available-commands)
