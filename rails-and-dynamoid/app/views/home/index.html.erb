@@ -1,4 +1,6 @@
 <h1>Home#index</h1>
 <% @notifications.each do |notification| %>
-  <%= notification.attributes.to_json %>
+  <p>
+    start_at: <%= notification.start_at %> / end_at: <%= notification.end_at %>
+  </p>
 <% end %>

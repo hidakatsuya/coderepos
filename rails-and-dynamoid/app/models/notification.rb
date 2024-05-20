@@ -7,6 +7,4 @@ class Notification
   field :detail_url, :string
   field :start_at, :datetime
   field :end_at, :datetime
-
-  global_secondary_index hash_key: :start_at, range_key: :end_at
 end
